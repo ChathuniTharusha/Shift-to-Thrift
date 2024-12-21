@@ -1,0 +1,180 @@
+﻿/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f2f9f1;
+    border-bottom: 2px solid #ddeedf;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar .navbar-brand {
+        font-size: 24px;
+        font-weight: bold;
+        color: #31511E;
+    }
+
+    .navbar .navbar-toggler {
+        border: none;
+    }
+
+    .navbar .navbar-toggler-icon {
+        background-color: #31511E;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+/* General Navbar Styles */
+.navbar {
+    background-color: #f2f9f1;
+    border-bottom: 2px solid #ddeedf;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar .navbar-brand {
+        font-size: 24px;
+        font-weight: bold;
+        color: #31511E;
+    }
+
+    .navbar .navbar-toggler {
+        border: none;
+    }
+
+    .navbar .navbar-toggler-icon {
+        background-color: #31511E;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+    color: black;
+    background-color: #aeccc6; /* Uniform color for all buttons */
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+    /* Hover State for Buttons */
+    .navbar-nav .nav-item .nav-link:hover {
+        background-color: #96b8ac; /* Slightly darker shade of #aeccc6 */
+        color: #ffffff;
+    }
+
+    /* Active State for Current Page */
+    .navbar-nav .nav-item .nav-link.active {
+        background-color: #8aa799; /* Darker shade for the active button */
+        color: white;
+    }
+
+/* Navbar Icons */
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+    .navbar .icons img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        transition: transform 0.2s ease, filter 0.3s ease;
+    }
+
+        .navbar .icons img:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0px 0px 3px #0A7075);
+        }
+
+/* Icons */
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 30px; /* Shift icons to the left */
+}
+
+    .navbar .icons img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        transition: transform 0.2s ease, filter 0.3s ease;
+    }
+
+        .navbar .icons img:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0px 0px 3px #0A7075);
+        }
+
+/* Footer */
+.footer {
+    background-color: #f2f9f1;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #5C715E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #ddeedf;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .footer a {
+        color: #0A7075;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .footer a:hover {
+            color: #31511E;
+            text-decoration: underline;
+        }
+
+/* Highlight Menu and Active Section */
+.navbar .navbar-nav .nav-link[data-active="true"] {
+    background-color: #0A7075;
+    color: white;
+    font-weight: bold;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Buttons */
+button {
+    background-color: #0A7075;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #0C969C;
+    }
+
+/* Active State Styling */
+.active-menu {
+    background-color: #31511E;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+}

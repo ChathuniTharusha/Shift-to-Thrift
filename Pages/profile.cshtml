@@ -1,0 +1,63 @@
+﻿@page
+@model Shift_to_Thrift.Pages.profileModel
+@{
+    ViewData["Title"] = "User Profile";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="~/css/profile.css">
+</head>
+<body>
+    <header class="banner first-color">
+        <img src="/images/banner.jpg" alt="Shift to Thrift Banner" class="banner-image">
+
+    </header>
+    <main class="content second-color">
+        <section class="profile-container">
+            <h1>Welcome, [User's Name]</h1>
+            <div class="profile-info">
+                <h2>Profile Details</h2>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Joined:</strong> January 1, 2023</p>
+                <a href="/profile/edit" class="action-button edit-profile-btn">Edit Profile</a>
+            </div>
+            <div class="profile-actions">
+                <h2>Your Actions</h2>
+                <a href="/orders" class="action-button">View Order History</a>
+                <a href="/wishlist" class="action-button">View Wishlist</a>
+                <a href="/logout" class="action-button logout-btn">Logout</a>
+            </div>
+        </section>
+        <section class="order-history">
+            <h2>Recent Orders</h2>
+            <ul>
+                <li class="order-item">
+                    Order #1234 - Delivered - <a href="/orders/1234">View Details</a>
+                </li>
+                <li class="order-item">
+                    Order #1235 - Shipped - <a href="/orders/1235">View Details</a>
+                </li>
+                <li class="order-item">
+                    Order #1236 - Processing - <a href="/orders/1236">View Details</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer fourth-color">
+        <div class="footer-left">
+            <p>Shift to Thrift</p>
+        </div>
+        <div class="footer-right">
+            <a href="/contact" class="footer-icon"><img src="/images/contact.png" alt="Contact"></a>
+            <a href="/help" class="footer-icon"><img src="/images/help.png" alt="Help"></a>
+            <a href="mailto:info@shift2thrift.com" class="footer-icon"><img src="/images/email.png" alt="Email"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
