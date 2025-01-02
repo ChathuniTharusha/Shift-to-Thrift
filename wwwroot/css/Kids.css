@@ -123,30 +123,3 @@
         .product-card button:hover {
             background-color: #0C969C;
         }
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #f2f9f1;
-    border-top: 2px solid #ddeedf;
-    font-size: 14px;
-    color: #5C715E;
-}
-
-.footer-left p {
-    margin: 0;
-}
-
-.footer-right a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #0A7075;
-    transition: color 0.3s ease;
-}
-
-    .footer-right a:hover {
-        color: #31511E;
-    }

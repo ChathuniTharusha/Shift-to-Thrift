@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Shift_to_Thrift</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Shift_to_Thrift.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Layout.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
 </head>
+
 <body>
     <header>
+        <!-- Banner -->
+        <section class="banner">
+            <img src="/images/banner.jpg" alt="Shift to Thrift Banner" class="banner-image">
+        </section>
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <!-- Brand -->
@@ -23,37 +28,30 @@
                 <!-- Navbar Links and Icons -->
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <!-- Home -->
                         <li class="nav-item">
                             <a class="nav-link active" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <!-- Men -->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/Men">Men</a>
                         </li>
-                        <!-- Women -->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/Women">Women</a>
                         </li>
-                        <!-- Kids -->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/Kids">Kids</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav icons">
-                        <!-- Cart -->
                         <li class="nav-item">
                             <a class="nav-link" href="/cart" title="Cart">
                                 <img src="/images/cart.png" alt="Cart" width="24" height="24">
                             </a>
                         </li>
-                        <!-- Wishlist -->
                         <li class="nav-item">
                             <a class="nav-link" href="/wishlist" title="Wishlist">
                                 <img src="/images/wishlist.png" alt="Wishlist" width="24" height="24">
                             </a>
                         </li>
-                        <!-- Profile -->
                         <li class="nav-item">
                             <a class="nav-link" href="/profile" title="Profile">
                                 <img src="/images/profile.png" alt="Profile" width="24" height="24">
@@ -63,24 +61,21 @@
                 </div>
             </div>
         </nav>
-
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Shift_to_Thrift - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="footer border-top text-muted">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span>&copy; 2024 - Shift_to_Thrift</span>
+            <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

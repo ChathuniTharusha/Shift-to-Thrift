@@ -3,28 +3,18 @@
 @{
     ViewData["Title"] = "Shift To Thrift";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shift to Thrift</title>
-    <link rel="stylesheet" href="~/css/style.css">
-</head>
-<body>
-    <header class="banner first-color">
-        <img src="/images/banner.jpg" alt="Shift to Thrift Banner" class="banner-image">
-    </header>
-    <main class="content">
-        <section class="scrollable-section">
-            <h1>Welcome to Shift to Thrift</h1>
-            <p>
-                Explore our latest collections and enjoy the best thrifted items for men, women, and kids.
-            </p>
-        </section>
-    </main>
-    </header>
-    <main class="content second-color">
+@section Styles {
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+}
+
+<main class="content second-color">
+    <section class="scrollable-section text-center py-4">
+        <h1>Welcome to Shift to Thrift</h1>
+        <p>
+            Explore our latest collections and enjoy the best thrifted items for men, women, and kids.
+        </p>
+    </section>
+    <section class="d-flex justify-content-center my-4">
         <aside class="filter attractive-filter">
             <h2>Select Here</h2>
             <form>
@@ -36,82 +26,72 @@
                     <option value="party">Party Wear</option>
                     <option value="sports">Sports</option>
                 </select>
-                <button type="submit" class="btn fourth-color">Apply</button>
+                <button type="submit" class="btn fourth-color mt-3">Apply</button>
             </form>
         </aside>
-        <p class="promo-text">
+    </section>
+    <section class="promo-text text-center my-4">
+        <p>
             Thrift your favorite brands up to <span>90% off retail</span>, with thousands of new arrivals dropping daily.
         </p>
-        <section class="info-boxes">
-            <div class="info-box">
-                <h3>Newly Added Items</h3>
-                <ul>
-                    <li><a href="/items/dresses">Dresses</a></li>
-                    <li><a href="/items/tops">Tops</a></li>
-                    <li><a href="/items/pants">Pants</a></li>
-                </ul>
-            </div>
-            <div class="info-box">
-                <h3>Seasonal Offers</h3>
-                <ul>
-                    <li><a href="/offers/vouchers">Vouchers</a></li>
-                    <li><a href="/offers/free-delivery">Free Delivery</a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="slideshow">
-            <div class="slides-container">
-                <div class="slide">
-                    <img src="/images/item1.jpg" alt="Item 1">
-                    <p>$20</p>
-                    <a href="/item/1">View Item</a>
-                </div>
-                <div class="slide">
-                    <img src="/images/item2.jpg" alt="Item 2">
-                    <p>$25</p>
-                    <a href="/item/2">View Item</a>
-                </div>
-                <div class="slide">
-                    <img src="/images/item3.jpg" alt="Item 3">
-                    <p>$15</p>
-                    <a href="/item/3">View Item</a>
-                </div>
-                <div class="slide">
-                    <img src="/images/item4.jpg" alt="Item 4">
-                    <p>$10</p>
-                    <a href="/item/4">View Item</a>
-                </div>
-                <div class="slide">
-                    <img src="/images/item5.jpg" alt="Item 5">
-                    <p>$12</p>
-                    <a href="/item/5">View Item</a>
-                </div>
-                <div class="slide">
-                    <img src="/images/item6.jpg" alt="Item 6">
-                    <p>$18</p>
-                    <a href="/item/6">View Item</a>
-                </div>
-                <div class="slide">
-                    <img src="/images/item7.jpg" alt="Item 7">
-                    <p>$22</p>
-                    <a href="/item/7">View Item</a>
-                </div>
-            </div>
-        </section>
-        <div class="center-button">
-            <button class="btn shop-now-btn">Shop Now</button>
+    </section>
+    <section class="info-boxes d-flex justify-content-around my-4">
+        <div class="info-box">
+            <h3>Newly Added Items</h3>
+            <ul>
+                <li><a href="/items/dresses">Dresses</a></li>
+                <li><a href="/items/tops">Tops</a></li>
+                <li><a href="/items/pants">Pants</a></li>
+            </ul>
         </div>
-    </main>
-    <footer class="footer fourth-color">
-        <div class="footer-left">
-            <p>Shift to Thrift</p>
+        <div class="info-box">
+            <h3>Seasonal Offers</h3>
+            <ul>
+                <li><a href="/offers/vouchers">Vouchers</a></li>
+                <li><a href="/offers/free-delivery">Free Delivery</a></li>
+            </ul>
         </div>
-        <div class="footer-right">
-            <a href="/contact" class="footer-icon"><img src="/images/contact.png" alt="Contact"></a>
-            <a href="/help" class="footer-icon"><img src="/images/help.png" alt="Help"></a>
-            <a href="mailto:info@shift2thrift.com" class="footer-icon"><img src="/images/email.png" alt="Email"></a>
+    </section>
+    <section class="slideshow-container my-4">
+        <div class="slides-container d-flex">
+            <div class="slide">
+                <img src="/images/item1.jpg" alt="Item 1">
+                <p>$20</p>
+                <a href="/item/1">View Item</a>
+            </div>
+            <div class="slide">
+                <img src="/images/item2.jpg" alt="Item 2">
+                <p>$25</p>
+                <a href="/item/2">View Item</a>
+            </div>
+            <div class="slide">
+                <img src="/images/item3.jpg" alt="Item 3">
+                <p>$15</p>
+                <a href="/item/3">View Item</a>
+            </div>
+            <div class="slide">
+                <img src="/images/item4.jpg" alt="Item 4">
+                <p>$10</p>
+                <a href="/item/4">View Item</a>
+            </div>
+            <div class="slide">
+                <img src="/images/item5.jpg" alt="Item 5">
+                <p>$12</p>
+                <a href="/item/5">View Item</a>
+            </div>
+            <div class="slide">
+                <img src="/images/item6.jpg" alt="Item 6">
+                <p>$18</p>
+                <a href="/item/6">View Item</a>
+            </div>
+            <div class="slide">
+                <img src="/images/item7.jpg" alt="Item 7">
+                <p>$22</p>
+                <a href="/item/7">View Item</a>
+            </div>
         </div>
-    </footer>
-    <script src="~/js/script.js"></script>
-</body>
-</html>
+    </section>
+    <div class="center-button text-center my-4">
+        <button class="btn shop-now-btn">Shop Now</button>
+    </div>
+</main>
